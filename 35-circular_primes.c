@@ -13,7 +13,9 @@ void swap(int* const num1, int* const num2);
 
 int main(void)
 {
+    int total = 0;
     printf("Found circular primes: 2, 3, 5");
+    total  = 3;
     for(int i = 7; i <= 1000000; i+=2)
     {
         if(preCalc(i))
@@ -21,9 +23,12 @@ int main(void)
             if(isCircPrime(i))
             {
                 printf(", %d", i);
+                total++;
             }
         }
     }
+
+    printf("\n\nFound a total of %d circular primes", total);
 }
 
 bool isPrime(int num)
