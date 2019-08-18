@@ -81,28 +81,6 @@ void mutate(int digits[], int start, int size, bool* const circPrime)
             return;
         }
     }
-
-    /*
-    if(start == size - 1)
-    {
-        if(isPrime(putTogetherDgits(digits)))
-        {
-            return;
-        }
-        else
-        {
-            *circPrime = false;
-            return;
-        }
-        
-    }
-    for(int i = start; i < size && *circPrime == true; i++)
-    {
-        swap(&digits[start], &digits[i]);
-        mutate(digits, start + 1, size, circPrime);
-        swap(&digits[start], &digits[i]);
-    }
-    */
 }
 
 int separateDigits(int num, int digits[])
