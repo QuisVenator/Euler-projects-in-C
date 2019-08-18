@@ -71,11 +71,7 @@ void mutate(int digits[], int start, int size, bool* const circPrime)
             swap(&digits[start + j], &digits[start + j + 1]);
         }
 
-        if(isPrime(putTogetherDgits(digits)))
-        {
-            //return;
-        }
-        else
+        if(!isPrime(putTogetherDgits(digits)))
         {
             *circPrime = false;
             return;
